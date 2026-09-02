@@ -1,9 +1,241 @@
-<html>
-    <head>
-        <title>Hello World</title>
-    </head>
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="An about-me page introducing Abraham, his work as a SOC analyst, his interest in fitness and his support for FC Barcelona."
+  >
+  <title>About Me | Abraham</title>
 
-  <body>
-        <h1>Hello World again</h1>
-    </body>
+  <style>
+    :root {
+      --text: #f8fafc;
+      --muted: #cbd5e1;
+      --accent: #f7c948;
+      --card: rgba(8, 18, 42, 0.82);
+      --border: rgba(255, 255, 255, 0.16);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      background:
+        radial-gradient(circle at top left, rgba(168, 19, 62, 0.42), transparent 32rem),
+        radial-gradient(circle at bottom right, rgba(0, 77, 152, 0.55), transparent 36rem),
+        linear-gradient(135deg, #050914 0%, #101d3d 52%, #310b21 100%);
+      background-attachment: fixed;
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+    }
+
+    header,
+    main,
+    footer {
+      width: min(900px, calc(100% - 2rem));
+      margin-inline: auto;
+    }
+
+    header {
+      margin-top: 2rem;
+      padding: 3rem clamp(1.5rem, 5vw, 3.5rem);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      background: var(--card);
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(12px);
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.6rem, 8vw, 5rem);
+      letter-spacing: -0.04em;
+      line-height: 1;
+    }
+
+    header > p {
+      margin: 1rem 0 1.5rem;
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+    }
+
+    nav a {
+      padding: 0.55rem 0.9rem;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--text);
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    main {
+      padding: 1rem 0;
+    }
+
+    section {
+      margin: 1rem 0;
+      padding: clamp(1.5rem, 5vw, 3rem);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: var(--card);
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
+      backdrop-filter: blur(12px);
+    }
+
+    h2 {
+      margin-top: 0;
+      color: var(--accent);
+      font-size: 1.8rem;
+    }
+
+    h3 {
+      margin-bottom: 0.25rem;
+      font-size: 1.25rem;
+    }
+
+    p {
+      color: var(--muted);
+    }
+
+    strong,
+    abbr {
+      color: var(--text);
+    }
+
+    a {
+      color: var(--accent);
+    }
+
+    a:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 4px;
+    }
+
+    footer {
+      padding: 1.5rem 0 2.5rem;
+      text-align: center;
+    }
+
+    footer p {
+      margin: 0.35rem;
+    }
+
+    @media (max-width: 520px) {
+      header {
+        margin-top: 1rem;
+      }
+
+      nav {
+        align-items: stretch;
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header id="top">
+    <h1>About Me</h1>
+    <p>Hello and welcome to my first personal HTML page.</p>
+
+    <nav aria-label="Page navigation">
+      <a href="#introduction">Introduction</a>
+      <a href="#career">My Career</a>
+      <a href="#interests">My Interests</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="introduction">
+      <h2>Introduction</h2>
+      <p>
+        My name is <strong>Abraham</strong>. I have an interest in technology,
+        cyber security and learning how websites work. I have previously created
+        websites using Shopify and Wix, but I am now learning how to build them
+        myself using HTML.
+      </p>
+      <p>
+        This page gives a short introduction to my professional background,
+        personal interests and experience.
+      </p>
+    </section>
+
+    <section id="career">
+      <h2>My Career</h2>
+      <h3>Security Operations Centre Analyst</h3>
+      <p>
+        I work as a <abbr title="Security Operations Centre">SOC</abbr> analyst.
+        My role involves monitoring security alerts, investigating suspicious
+        activity and helping to protect computer systems and information from
+        cyber threats.
+      </p>
+      <p>
+        Cyber security requires attention to detail, problem-solving and a
+        willingness to continue learning because threats and technology are
+        constantly changing.
+      </p>
+    </section>
+
+    <section id="interests">
+      <h2>My Interests</h2>
+
+      <h3>Fitness</h3>
+      <p>
+        Fitness is an important part of my life. I enjoy exercising because it
+        helps me stay disciplined, improve my health and maintain a positive
+        mindset.
+      </p>
+
+      <h3>Football</h3>
+      <p>
+        I am also a football supporter, and my favourite team is
+        <strong>FC Barcelona</strong>. I enjoy watching their matches and
+        following the club throughout the season.
+      </p>
+      <p>
+        You can learn more about the club on the
+        <a
+          href="https://www.fcbarcelona.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Visit the official FC Barcelona website"
+        >official FC Barcelona website</a>.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Abraham | Web Development Project</p>
+    <p><a href="#top">Return to the top</a></p>
+  </footer>
+</body>
 </html>
